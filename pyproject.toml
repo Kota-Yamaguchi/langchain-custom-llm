@@ -1,0 +1,30 @@
+[project]
+name = "langchain-custom-llm"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Kota-Yamaguchi", email = "yama.guchi.k1207@gmail.com" }
+]
+dependencies = [
+    "langchain>=0.3.3",
+    "langchain-core>=0.3.10",
+    "jupyter>=1.1.1",
+    "dify-client>=0.1.10",
+    "pydantic>=2.9.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_custom_llm"]
